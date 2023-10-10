@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I'm bored</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <% console.log("ejs",locals.data); %>
+      <h2>Let's find something for you to do ✌️</h2>
+      <form action="/submit" class="options" method="post">
+        <div class="options">
+          <select style="width: 100%" name="activity">
+            <option value="">Random Activity</option>
+            <option value="education">Education</option>
+            <option value="recreational">Recreational</option>
+            <option value="social">Social</option>
+            <option value="cooking">Cooking</option>
+            <option value="charity">Charity</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="busywork">Busywork</option>
+          </select>
+          <select style="width: 100%" name="participants">
+            <option value="">Any Number</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+          </select>
+          <button type="submit">GO</button>
+        </div>
+      </form>
+      <% if (locals.data) { %>
+
+      <div class="displayData">
+        <p><%= data.activity %></p>
+        <div>
+          <p>type: <%= data.type %></p>
+          <p>participants: <%= data.participants %></p>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="displayData">
+        <p><%= locals.error %></p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

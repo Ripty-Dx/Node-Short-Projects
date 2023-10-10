@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0px;
+  height: 100vh;
+  font-family:'Courier New', Courier, monospace
+
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+  flex-direction: column;
+  margin: auto;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  width: 100%;
+  gap: 3%;
+}
+
+button,
+select {
+  margin: 0px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+.displayData {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  margin-top: 20px;
+  width: 100%;
+}
+.displayData div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+p{
+    padding: 5px;
+}

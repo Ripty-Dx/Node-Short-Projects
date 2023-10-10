@@ -1,4 +1,8 @@
 body,html{
     margin: 0px;
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+p{
+    min-width: 100%;
 }

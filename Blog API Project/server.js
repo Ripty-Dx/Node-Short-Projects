@@ -68,7 +68,7 @@ app.post("/api/posts/:id", async (req, res) => {
 });
 
 // Delete a post
-app.get("/api/posts/delete/:id", async (req, res) => {
+app.get("/api/posts/d   elete/:id", async (req, res) => {
   try {
     await axios.delete(`${API_URL}/posts/${req.params.id}`);
     res.redirect("/");
